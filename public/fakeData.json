@@ -1,0 +1,50 @@
+[
+  {
+    "price": "70,000",
+    "img": "https://i.ibb.co/gRvFjwQ/white1.jpg",
+    "color": "White",
+    "name": "Aurora",
+    "vehicleStatus": "New",
+    "model": "Aurora 811"
+  },
+  {
+    "price": "100,000",
+    "img": "https://i.ibb.co/Ssnkwz9/blue1.jpg",
+    "color": "Blue",
+    "name": "Serpent",
+    "vehicleStatus": "New",
+    "model": "Serpent 16.6"
+  },
+  {
+    "price": "90,000",
+    "img": "https://i.ibb.co/0Kvj2xP/white2.jpg",
+    "color": "White Smoke",
+    "name": "Basilisk",
+    "vehicleStatus": "New",
+    "model": "Basilisk 811"
+  },
+  {
+    "price": "75,000",
+    "img": "https://i.ibb.co/RcXN1xn/white3.jpg",
+    "color": "White",
+    "name": "Mirage",
+    "vehicleStatus": "Old",
+    "model": "Mirage"
+  },
+  {
+    "price": "95,000",
+    "img": "https://i.ibb.co/Nj4HRbD/black.jpg",
+    "color": "Black",
+    "name": "Realm",
+    "vehicleStatus": "New",
+    "model": "Realm 16.6"
+  },
+  {
+    "price": "72,000",
+    "img": "https://i.ibb.co/XZhHhQd/yellow.jpg",
+    "color": "Yellow",
+    "name": "Empire",
+    "vehicleStatus": "Old",
+    "model": "Empire Z06"
+  }
+]

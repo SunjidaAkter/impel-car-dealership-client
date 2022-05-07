@@ -1,0 +1,12 @@
+.team-container {
+    background-image: linear-gradient(90deg, rgb(179, 184, 185), rgb(255, 255, 255));
+    border-radius: 20px;
+}
+
+.team-text {
+    font-family: 'Courgette', cursive;
+}
+
+.bold {
+    font-weight: 600;
+}

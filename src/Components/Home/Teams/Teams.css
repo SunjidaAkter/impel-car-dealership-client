@@ -1,0 +1,35 @@
+.teams {
+    background-image: url("https://demo.vehica.com/wp-content/themes/vehica/assets/img/background-team.png");
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.teams-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 40px; */
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .teams-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-gap: 40px; */
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:688px) {
+    .teams-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-gap: 40px; */
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Bangers&family=Bebas+Neue&family=Courgette&family=Inter:wght@400;700&family=Lobster&family=Manrope:wght@700&family=Poppins:wght@500;600;700&display=swap');
+/* font-family: 'Balsamiq Sans', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Manrope', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.text {
+    text-align: left;
+}
+
+.font {
+
+    font-family: 'Bangers', cursive;
+}
+
+.buttn {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgb(33, 36, 37), rgb(59, 58, 58));
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 25px;
+    border-radius: 20px;
+
+}
+
+.buttn:hover {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgb(132, 136, 138), rgb(255, 255, 255));
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 25px;
+    transition: 1s ease-in-out;
+}
+
+.item {
+    border-radius: 20px;
+    width: 83%;
+    background-image: linear-gradient(0deg, rgb(119, 129, 133), rgba(37, 36, 36, 0.548));
+}
+
+.item img {
+    border-radius: 20px;
+}
+
+.item:hover {
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.87);
+    transition: 1s ease-in-out;
+}

@@ -1,29 +1,62 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import logo from '../../../Media/logo.png'
+import Loading from '../Loading/Loading';
+import './Header.css'
 
 const Header = () => {
+    let [user, loading] = useAuthState(auth);
+    if (loading) {
+        return <Loading />;
+    }
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect sticky='top' expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand as={Link} to='/'><img style={{ height: '40px' }} src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link className='link' as={Link} to='/'>Home</Nav.Link>
+                        <Nav.Link className='link' as={Link} to='/blogs'>Blogs</Nav.Link>
+                        <Nav.Link className='link' as={Link} to='/about'>About</Nav.Link>
+                        {user ? (
+                            <Nav.Link as={Link} to="/manageInventories" className="link">
+                                Manage Items
+                            </Nav.Link>
+                        ) : (
+                            ""
+                        )}
+                        {user ? (
+                            <Nav.Link to="/addNewItem" className="link">
+                                Add Item
+                            </Nav.Link>
+                        ) : (
+                            ""
+                        )}
+                        {user ? (
+                            <Nav.Link to="/myItems" className="link">
+                                My items
+                            </Nav.Link>
+                        ) : (
+                            ""
+                        )}
+
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link>
+                        {
+                            user ?
+                                <button className='btn btn-link text-light text-decoration-none' onClick={handleSignOut}>Sign Out</button>
+                                :
+                                <Nav.Link className='text-light link' as={Link} to="signIn">
+                                    Sign In
+                                </Nav.Link>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
