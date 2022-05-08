@@ -18,7 +18,7 @@ const Items = () => {
                 }
             </div>
             <Link style={{ textDecoration: 'none' }} to="/manageInventories">
-                <button className='buttn w-25 d-block mx-auto mb-5'>Manage Inventory</button>
+                <button className=' buttn width d-block mx-auto mb-5'>Manage Item</button>
             </Link>
         </div>
     );

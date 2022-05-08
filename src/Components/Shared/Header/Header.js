@@ -34,14 +34,14 @@ const Header = () => {
                             ""
                         )}
                         {user ? (
-                            <Nav.Link to="/addNewItem" className="link">
+                            <Nav.Link as={Link} to="/addNewItem" className="link">
                                 Add Item
                             </Nav.Link>
                         ) : (
                             ""
                         )}
                         {user ? (
-                            <Nav.Link to="/myItems" className="link">
+                            <Nav.Link as={Link} to="/myItems" className="link">
                                 My items
                             </Nav.Link>
                         ) : (

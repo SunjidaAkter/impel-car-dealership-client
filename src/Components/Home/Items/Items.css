@@ -10,7 +10,13 @@
     background-color: black;
 }
 
+.width {
+    width: 25%;
+
+}
+
 @media only screen and (min-width:689px) and (max-width:992px) {
+
     .items-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -29,4 +35,8 @@
         margin-bottom: 30px;
     }
 
+    .width {
+        width: 70%;
+
+    }
 }
