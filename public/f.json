@@ -1,7 +1,6 @@
 [
     {
         "img": "https://demo.vehica.com/wp-content/uploads/2020/10/p7-1-336x284.jpg",
-        "_id": "6275163521fa4734920476f7",
         "name": "Melisa Espinoza",
         "status": "Supplier",
         "email": "melisaespinoza@xyqag.com",
@@ -9,7 +8,6 @@
     },
     {
         "img": "https://demo.vehica.com/wp-content/uploads/2020/10/p2-1-336x284.jpg",
-        "_id": "62751635b172139f00936e7b",
         "name": "Gail Battle",
         "status": "Supplier",
         "email": "gailbattle@xyqag.com",
@@ -17,7 +15,6 @@
     },
     {
         "img": "https://demo.vehica.com/wp-content/uploads/2020/10/p6-1-336x284.jpg",
-        "_id": "627516350df257850ed79b1e",
         "name": "Shannon Tran",
         "status": "Supplier",
         "email": "shannontran@xyqag.com",

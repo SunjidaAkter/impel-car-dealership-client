@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import useAccessToken from '../../../Hooks/useAccessToken';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -18,7 +19,8 @@ const SignUp = () => {
 
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    if (user) {
+    const [token] = useAccessToken(user);
+    if (token) {
         navigate(from, { replace: true });
     }
 

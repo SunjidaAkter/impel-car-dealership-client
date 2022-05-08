@@ -10,7 +10,7 @@ const ManageInventories = () => {
     const deleteHandler = (id) => {
         const confirm = window.confirm("are you sure?");
         if (confirm) {
-            const url = `http://localhost:5000/myItem/${id}`;
+            const url = `https://powerful-island-01636.herokuapp.com/myItem/${id}`;
             fetch(url, {
                 method: "DELETE",
             })
@@ -22,7 +22,7 @@ const ManageInventories = () => {
     };
     return (
         <div className='container'>
-            <Link to="/add-new-item">
+            <Link to="/addNewItem">
                 <button className="btn btn-dark px-5 py-3 mt-5">
                     Add New Item
                 </button>
@@ -30,7 +30,7 @@ const ManageInventories = () => {
             <div>
                 <h2 className="text-center pt-5 pb-2 m-0">Manage all items</h2>
                 <div className=" p-4">
-                    <Table responsive striped bordered hover variant="light">
+                    <Table responsive striped bordered hover variant="dark">
                         <thead>
                             <tr className="text-center">
                                 <th>Name</th>

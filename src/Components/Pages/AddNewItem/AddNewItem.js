@@ -37,7 +37,7 @@ const AddNewItem = () => {
             quantity,
         };
 
-        fetch("http://localhost:5000/item", {
+        fetch("https://powerful-island-01636.herokuapp.com/item", {
             method: "POST",
             body: JSON.stringify(myItem),
             headers: {

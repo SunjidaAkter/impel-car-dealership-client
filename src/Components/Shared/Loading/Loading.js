@@ -3,7 +3,7 @@ import React from 'react';
 const Loading = () => {
     return (
         <div>
-            <h1>loading...</h1>
+            <img src="https://media3.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif" alt="" />
         </div>
     );
 };

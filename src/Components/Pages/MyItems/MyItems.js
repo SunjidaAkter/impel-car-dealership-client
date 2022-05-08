@@ -14,7 +14,7 @@ const MyItems = () => {
     const [user, loading] = useAuthState(auth);
 
     useEffect(() => {
-        const url = ` http://localhost:5000/myItem?email=${user?.email}`;
+        const url = ` https://powerful-island-01636.herokuapp.com/myItem?email=${user?.email}`;
         const myItems = async () => {
             if (loading) {
                 return <Loading />;
@@ -41,7 +41,7 @@ const MyItems = () => {
     const deleteHandler = (id) => {
         const confirm = window.confirm("are you sure?");
         if (confirm) {
-            const url = `http://localhost:5000/myItem/${id}`;
+            const url = `https://powerful-island-01636.herokuapp.com/myItem/${id}`;
             fetch(url, {
                 method: "DELETE",
             })

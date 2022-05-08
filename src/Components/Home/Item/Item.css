@@ -32,9 +32,9 @@ font-family: 'Poppins', sans-serif; */
 }
 
 .buttn:hover {
-    display: block;
+
     margin-top: 20px;
-    width: 100%;
+
     background-image: linear-gradient(0deg, rgb(132, 136, 138), rgb(255, 255, 255));
     color: black;
     padding-top: 10px;

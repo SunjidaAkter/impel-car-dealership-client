@@ -9,7 +9,7 @@ const SingleItem = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://powerful-island-01636.herokuapp.com/item/${id}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setItem(data));
@@ -19,7 +19,7 @@ const SingleItem = () => {
         e.preventDefault();
         const number = parseInt(e.target.number.value);
         let quantity = parseInt(item.quantity) + number;
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://powerful-island-01636.herokuapp.com/item/${id}`;
         fetch(url, {
             method: "PUT",
             body: JSON.stringify({ quantity }),
@@ -38,7 +38,7 @@ const SingleItem = () => {
         if (quantity > 1) {
             let quantityMinus = quantity - 1;
 
-            const url = `http://localhost:5000/item/${id}`;
+            const url = `https://powerful-island-01636.herokuapp.com/item/${id}`;
             fetch(url, {
                 method: "PUT",
                 body: JSON.stringify({ quantity: quantityMinus }),
@@ -58,6 +58,7 @@ const SingleItem = () => {
 
         <div className="bg  ">
             <div className="container single-container single-font">
+                <h1 className="font mt-5">Increase the quantity of the Items</h1>
                 <Form className="mt-5 d-flex " onSubmit={InputHandler}>
                     <Form.Group className="mb-3 mt-1 w-75 " controlId="formBasicEmail">
                         <Form.Control className="py-2" type="number" placeholder="Enter Quantity Number" name="number" />
@@ -101,6 +102,9 @@ const SingleItem = () => {
                     </div>
                 </div>
             </div>
+            <Link style={{ textDecoration: 'none' }} to="/manageInventories">
+                <button className=' buttn width d-block mx-auto mb-5'>Manage Item</button>
+            </Link>
         </div>
     );
 };

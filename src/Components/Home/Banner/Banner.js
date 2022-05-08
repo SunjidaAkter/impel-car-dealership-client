@@ -12,8 +12,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3 className='carousel-h'>First slide label</h3>
-                    <p className='carousel-p'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3 className='carousel-h font'>Find Your Perfect Car</h3>
+                    <p className='carousel-p'>Accelerate your dream Buy your car from IMPEL car dealer.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -24,8 +24,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3 className='carousel-h'>Second slide label</h3>
-                    <p className='carousel-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 className='carousel-h font'>Find Your Perfect Car</h3>
+                    <p className='carousel-p'>Accelerate your dream. Buy your car from IMPEL car dealer.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -36,8 +36,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3 className='carousel-h'>Third slide label</h3>
-                    <p className='carousel-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 className='carousel-h font'>Find Your Perfect Car</h3>
+                    <p className='carousel-p'>Accelerate your dream Buy your car from IMPEL car dealer.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

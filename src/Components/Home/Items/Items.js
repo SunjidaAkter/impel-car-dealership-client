@@ -11,7 +11,7 @@ const Items = () => {
             <h1 id='items' className='text-center mb-1 mt-5 font'>Items & Pricing</h1>
             <div className='container items-container'>
                 {
-                    items.map(item => <Item
+                    items.slice(0, 6).map(item => <Item
                         item={item}
                         key={item.id}
                     ></Item>)

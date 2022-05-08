@@ -5,6 +5,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import useAccessToken from '../../../Hooks/useAccessToken';
 import Loading from '../../Shared/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
 
@@ -13,14 +14,17 @@ const SignIn = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
-
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [token] = useAccessToken(user);
+    if (token) {
+        let from = location.state?.from?.pathname || "/";
+        navigate(from, { replace: true });
+    }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
@@ -38,10 +42,9 @@ const SignIn = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('http://localhost:5000/signIn', { email });
-        console.log(data)
+        const { data } = await axios.post('https://powerful-island-01636.herokuapp.com/signIn', { email });
         localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
+
     }
 
     const navigateSignUp = event => {
@@ -59,7 +62,7 @@ const SignIn = () => {
         }
     }
     return (
-        <div className='container w-50'>
+        <div className='container py-5 w-50'>
             <Form onSubmit={handleSignIn} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" name="" required />
@@ -74,7 +77,7 @@ const SignIn = () => {
             </Form>
             <SocialSignIn></SocialSignIn>
             <div className='d-flex justify-content-between'>
-                <p className='mt-1'>New to IMPEL? <Link to="/signUp" className=' text-success pe-auto text-decoration-none' onClick={navigateSignUp}>Please Register</Link> </p>
+                <p className='mt-1'>New to IMPEL? <Link to="/signUp" className=' text-success pe-auto text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link> </p>
                 <p>Forget Password?<button className='btn btn-link text-success pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             </div>
         </div>

@@ -7,7 +7,7 @@ const Teams = () => {
     const [teams, setTeams] = useState([]);
 
     useEffect(() => {
-        fetch('f.json')
+        fetch("https://powerful-island-01636.herokuapp.com/supplier")
             .then((res) => res.json())
             .then((data) => setTeams(data));
     }, []);
