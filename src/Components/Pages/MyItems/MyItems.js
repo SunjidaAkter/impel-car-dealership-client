@@ -55,7 +55,7 @@ const MyItems = () => {
 
     return (
         <div className='container bg'>
-            <h1>Your Car</h1>
+            <h1 className='font mt-4'>Your Car</h1>
             <div className="row row-cols-md-2 ">
                 {myItems?.map((myItem) => (
                     <MyItem

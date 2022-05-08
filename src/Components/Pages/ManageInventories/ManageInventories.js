@@ -23,7 +23,7 @@ const ManageInventories = () => {
     return (
         <div className='container'>
             <Link to="/add-new-item">
-                <button className="manage_inventories_btn px-5 py-3">
+                <button className="btn btn-dark px-5 py-3 mt-5">
                     Add New Item
                 </button>
             </Link>
@@ -45,7 +45,7 @@ const ManageInventories = () => {
                             {manageItem.map((item) => (
                                 <tr key={item?._id}>
                                     <td>{item?.name}</td>
-                                    <td>{item?.price}</td>
+                                    <td>${item?.price}</td>
                                     <td>{item?.quantity}</td>
                                     <td>{item?.supplierName}</td>
                                     <td>{item?.sold}</td>

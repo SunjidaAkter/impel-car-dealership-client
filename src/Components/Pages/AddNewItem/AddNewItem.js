@@ -72,7 +72,7 @@ const AddNewItem = () => {
                     <Form.Control type="number" placeholder="Enter Sell" name="sold" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="text" placeholder="Enter Quantity" name="quantity" required />
+                    <Form.Control type="number" placeholder="Enter Quantity" name="quantity" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control type="text" placeholder="Enter Color" name="color" required />
