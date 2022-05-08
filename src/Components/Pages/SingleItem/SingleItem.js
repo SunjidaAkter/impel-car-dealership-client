@@ -73,30 +73,31 @@ const SingleItem = () => {
                             <img className='w-75  rounded ' src={item?.img} alt="" />
                         </div>
                         <div className="px-5">
-                            <h2 className="text font ms-4 pt-2">{item?.name}</h2>
+                            <h2 className="text font pt-2">{item?.name}</h2>
                             <div className='d-flex justify-content-around align-items-center '>
 
-                                <span className='ms-4 mt-2'>
+                                <span className=' mt-2'>
                                     <span className='text'><b>Model</b></span><br />
                                     <span className='text'><b>Status</b></span><br />
                                     <span className='text'><b>Color</b></span>
                                 </span>
-                                <span className='ms-4 '>
+                                <span className=' '>
                                     <span>-</span><br />
                                     <span>-</span><br />
                                     <span>-</span>
                                 </span>
-                                <span className='ms-4 text'>
+                                <span className=' text'>
                                     <span className=''>{item?.model}</span><br />
                                     <span className=''>{item?.vehicleStatus}</span><br />
                                     <span className=''>{item?.color}</span>
                                 </span>
 
                             </div>
-                            <p className="line ms-4 mt-4"><b>Price :</b> ${item?.price}</p>
-                            <p className="line ms-4"><b>Quantity :</b> {item?.quantity}</p>
-                            <p className="line ms-4"><b>Supplier Name :</b> {item?.supplierName}</p>
-                            <p className="line ms-4"><b>Sold :</b> {item?.sold}</p>
+                            <p className="line  mt-4"><b>ID :</b> ${item?._id}</p>
+                            <p className="line "><b>Price :</b> ${item?.price}</p>
+                            <p className="line "><b>Quantity :</b> {item?.quantity}</p>
+                            <p className="line "><b>Supplier Name :</b> {item?.supplierName}</p>
+                            <p className="line "><b>Sold :</b> {item?.sold}</p>
                             <button onClick={() => deliveryHandler(item?.quantity)} className=" my-4 btn btn-dark">Delivered</button>
                         </div>
                     </div>

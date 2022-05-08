@@ -38,6 +38,7 @@ const ManageInventories = () => {
                                 <th>Quantity</th>
                                 <th>Supplier Name</th>
                                 <th>Sold</th>
+                                <th>Update</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
@@ -49,6 +50,11 @@ const ManageInventories = () => {
                                     <td>{item?.quantity}</td>
                                     <td>{item?.supplierName}</td>
                                     <td>{item?.sold}</td>
+                                    <td className="text-center">
+                                        <Link style={{ textDecoration: 'none' }} to={`/item/${item?._id}`}>
+                                            <button className="btn btn-warning">UPDATE</button>
+                                        </Link>
+                                    </td>
                                     <td className="text-center">
                                         <button
                                             onClick={() => deleteHandler(item?._id)}

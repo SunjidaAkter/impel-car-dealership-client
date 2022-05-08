@@ -62,7 +62,8 @@ const SignIn = () => {
         }
     }
     return (
-        <div className='container py-5 w-50'>
+        <div className='container margin py-5 w-50'>
+            <h1 className='find mb-5 mt-2'>SIGN IN</h1>
             <Form onSubmit={handleSignIn} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" name="" required />

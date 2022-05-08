@@ -47,7 +47,8 @@ const SignUp = () => {
         // navigate(from, { replace: true });
     }
     return (
-        <div className='container w-50'>
+        <div className='container my-5 py-5 margin w-50'>
+            <h1 className='find mb-5 mt-2'>SIGN UP</h1>
             <Form onSubmit={handleSignUp}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Control type="name" placeholder="Enter name" name="name" required />
