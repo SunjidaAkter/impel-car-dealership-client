@@ -6,6 +6,7 @@ const Banner = () => {
     return (
         <Carousel fade>
             <Carousel.Item>
+
                 <img
                     className="d-block w-100"
                     src="https://demo.vehica.com/wp-content/uploads/2020/12/slide-1.jpg"
